@@ -83,13 +83,23 @@
 
 
 
-
+// startsWith endsWith includes
 var saludo = "Hola Mundo!";
-console.log( saludo.substr(0,1) === "H" );
-console.log( saludo.substr(0,1) === "h" );
 
-console.log( saludo.startsWith("H") );
-console.log( saludo.startsWith("h") );
+// ECMAS 5
+console.log( saludo.substr(0,1) === "H" ); // true: compara desde posicion 0 hasta posicion 1 con "H"
+console.log( saludo.substr(0,5) === "H" ); // false: compara desde posicion 0 hasta posicion 5 (Hola M) con "H"
+console.log( saludo.substr(0,1) === "h" ); // false: compara desde posicion 0 hasta posicion 1 con "h"
+console.log( saludo.indexOf("x") ); // retorno -1 porque no encontro caracter
+console.log( saludo.indexOf("u") ); // retorna posicion (0 a n) de donde encontro el caracter
 
-
-console.log( saludo.endsWith("!") );
+// ECMAS 6
+console.log( saludo.startsWith("H") ); // true
+console.log( saludo.startsWith("h") ); // false
+console.log( saludo.startsWith("Mu", 5) ); // true
+console.log( saludo.endsWith("!") ); // true
+console.log( saludo.includes("x") ); // retorna false porque no encontro caracter
+console.log( saludo.includes("u") ); // retorna true porque  encontro el caracter
+console.log( saludo.includes("x", 5) ); // false
+console.log( saludo.includes("d", 5) ); // true
+////////////////////////////////////////////
