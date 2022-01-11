@@ -105,7 +105,7 @@ console.log( saludo.includes("d", 5) ); // true
 ////////////////////////////////////////////
 
 
-
+console.log("////////////////////////////////////////////");
 
 
 
@@ -126,6 +126,7 @@ for( i in nombres ){
 }
 ////////////////////////////////////////////
 
+console.log("////////////////////////////////////////////");
 
 ////////////////////////////////////////////
 // Literal Templates (back tick o Acento Grave)
@@ -151,4 +152,52 @@ let multiLinea = `<h1 class=miClase>${nombre}</h1>
 `;
 console.log( multiLinea );
 
+console.log("////////////////////////////////////////////");
+
+
+let cliente = { name: "Fabio" }
+let tarjeta = { amount: 7, product: "alfajores", unitprice: 42 }
+let message = `Hola ${cliente.name}, quieres comprar ${tarjeta.amount} ${tarjeta.product} por un total de ${tarjeta.amount * tarjeta.unitprice} pesos?`;
+console.log(message);
+
 ////////////////////////////////////////////
+
+console.log("////////////////////////////////////////////");
+
+////////////////////////////////////////////
+// Templates con tag
+
+// Ejemplo 1 usando operador spread "..."
+function etiqueta( literales, ...substituciones ){
+  //console.log( arguments );
+  let resultado = "";
+  console.log(literales);
+  console.log(substituciones);
+
+  for(let i = 0; i < substituciones.length; i++){
+    resultado += literales[i];
+    resultado += substituciones[i];
+  }
+
+  return resultado;
+}
+
+let unidades = 5 , consto_unitario = 10;
+let mensaje = etiqueta`${unidades} tornillos cuentas ${ unidades * consto_unitario } pesos.`;
+console.log( mensaje );
+
+console.log("////////////////////////////////////////////");
+
+// Ejemplo 2
+
+function etiqueta2( literales, valor1, valor2 ){
+  console.log(literales);
+  console.log(valor1);
+  console.log(valor2);
+}
+
+let unidades2 = 5 , consto_unitario2 = 10;
+etiqueta2`${unidades2} tornillos cuentas ${ unidades2 * consto_unitario2 } pesos.`;
+
+
+console.log("////////////////////////////////////////////");
