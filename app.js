@@ -124,3 +124,31 @@ for( i in nombres ){
   let diferencia = ESPACIOS - nombres[i].length;
   console.log( nombres[i] + " ".repeat(diferencia) + "|" + telefonos[i] );
 }
+////////////////////////////////////////////
+
+
+////////////////////////////////////////////
+// Literal Templates (back tick o Acento Grave)
+
+function obtenerNombre(){
+  return "Fabio Martin Aoad";
+}
+
+let nombre = "Fabio";
+let apellido = "Aoad";
+let nombreCompleto = nombre + " " + apellido;
+
+console.log( nombreCompleto );
+
+let nombreCompleto2 = `El nombre completo es ${nombre} ${apellido}`;
+console.log( nombreCompleto2 );
+
+let nombreCompleto3 = `El nombre completo es ${obtenerNombre()} ${5 + 6}`;
+console.log( nombreCompleto3 );
+
+let multiLinea = `<h1 class=miClase>${nombre}</h1>
+<p>Hola Mundo mi apellido es ${apellido}</p>
+`;
+console.log( multiLinea );
+
+////////////////////////////////////////////
