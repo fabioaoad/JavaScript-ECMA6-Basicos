@@ -82,7 +82,7 @@
 
 
 
-
+////////////////////////////////////////////
 // startsWith endsWith includes
 var saludo = "Hola Mundo!";
 
@@ -103,3 +103,24 @@ console.log( saludo.includes("u") ); // retorna true porque  encontro el caracte
 console.log( saludo.includes("x", 5) ); // false
 console.log( saludo.includes("d", 5) ); // true
 ////////////////////////////////////////////
+
+
+
+
+
+
+////////////////////////////////////////////
+// repeat
+
+let texto = "Hola";
+console.log( texto.repeat(2) ); //HolaHola
+
+const ESPACIOS = 12;
+
+let nombres = ["Fabio", "Martin", "Aoad"];
+let telefonos = ["1259634586","5638462598","4456628753"];
+
+for( i in nombres ){
+  let diferencia = ESPACIOS - nombres[i].length;
+  console.log( nombres[i] + " ".repeat(diferencia) + "|" + telefonos[i] );
+}
