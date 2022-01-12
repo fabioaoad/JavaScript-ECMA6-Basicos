@@ -150,3 +150,38 @@ persona2.nombre = 'Martin';
 
 console.log( persona1 );
 console.log( persona2 );
+
+
+
+
+
+
+
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// Añadir propiedades a objetos a partir de otros objetos ustilizando el operador SPREAD
+// util para trabajar con patrón redux
+
+let persona3 = {
+  nombre: 'FABIO',
+  edad: 26
+};
+
+let persona4 = {
+  nombre: 'MARTIN',
+  edad: 18,
+  direccion: 'Residencial Belgrano',
+  conduce: true,
+  vehiculo: true,
+  vegetariano: false,
+  casado: false
+};
+
+persona3 = {
+  ...persona4,
+  ...persona3
+}
+
+
+console.log( persona3 );
+console.log( persona4 );
