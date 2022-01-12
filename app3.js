@@ -185,3 +185,52 @@ persona3 = {
 
 console.log( persona3 );
 console.log( persona4 );
+
+
+
+
+
+
+
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// Diferencia entre el SPREAD y REST
+
+
+// EJEMPLO 1 REST y SPREAD - INICIO
+
+function saludarRest( saludo, ...nombres ){
+
+  for ( i in nombres ) {
+    console.log( `${saludo} ${nombres[i]}.` );
+  }
+
+}
+
+
+
+function saludarSpread( saludo, ...nombres ){
+
+  console.log( `${saludo} ${nombres}.` );
+
+}
+
+
+saludarRest( "Hola", "Fabio", "Martin", "Aoad" );
+
+
+let personas = ["Maria", "Florencia", "Gabriela"];
+saludarSpread("Que tal!! ", personas);
+
+// EJEMPLO 1 REST y SPREAD - FIN
+
+
+
+// EJEMPLO 2 SPREAD - INICIO
+
+let partes = ["carburador", "rueda", "volante", "puerta"];
+let auto = ["Chasis", "Motor", ...partes, "asientos", "luces", "tablero"];
+
+console.log( auto );
+
+// EJEMPLO 2 SPREAD - FIN
