@@ -73,3 +73,55 @@ console.log("////////////////////////////////////////////");
 //   // cualqueir cosa
 //
 // }
+
+
+
+
+
+
+
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// Operador spread
+// REST permite especificar argumentos independientes que serán combinados en un arreglo,
+// SPREAD permite especificar un arreglo que será separado
+// y cada item enviado será un argumento independiente a la función.
+
+// EJEMPLO 1 ECMAS5 - INICIO
+
+var numeros = [1,4,6,7,55,162,487,850];
+var max = Math.max.apply( Math, numeros );
+
+console.log( max );
+
+// EJEMPLO 1 ECMAS5 - FIN
+
+
+
+// EJEMPLO 1 ECMAS6 - INICIO
+
+let numeros2 = [1,4,6,7,55,162,487,850];
+let max2 = Math.max( ...numeros2 );
+
+console.log( max2 );
+
+// EJEMPLO 1 ECMAS6 - FIN
+
+
+
+// EJEMPLO 2 ECMAS5 - INICIO
+
+function sum(x, y, z) {
+  return x + y + z;
+}
+const numbers = [1, 2, 3];
+console.log(sum.apply(null, numbers));
+
+// EJEMPLO 2 ECMAS5 - FIN
+
+
+// EJEMPLO 2 ECMAS6 - INICIO
+
+console.log(sum(...numbers));
+
+// EJEMPLO 2 ECMAS6 - FIN
