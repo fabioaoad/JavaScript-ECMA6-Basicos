@@ -234,3 +234,34 @@ let auto = ["Chasis", "Motor", ...partes, "asientos", "luces", "tablero"];
 console.log( auto );
 
 // EJEMPLO 2 SPREAD - FIN
+
+
+
+
+
+
+
+
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// new.target es una meta propiedad
+// new.target es más seguro que el instanceof
+
+
+function Persona(nombre){
+
+  if ( typeof new.target !== "undefined" ) {
+    this.nombre = nombre;
+  } else {
+    throw new Error('Esta función debe de ser utilizada con el new');
+  }
+
+  this.nombre = nombre;
+
+}
+
+var persona     = new Persona("Fabio");
+var noEsPersona =     Persona.call( persona, "Fabio");
+
+//console.log(persona);
+//console.log(noEsPersona);
