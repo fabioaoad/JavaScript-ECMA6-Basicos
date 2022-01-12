@@ -1,7 +1,7 @@
 //// UNIDAD 4 - CONTINUACIÓN ///
 console.log("////////////////////////////////////////////");
 ////////////////////////////////////////////
-// Parametros REST - Parametros sin nombre
+// Parámetros REST - Parámetros sin nombre
 
 // EJEMPLO en ECMAS5 - INICIO
 
@@ -53,3 +53,23 @@ let alumnos_arr4 = agregar_alumno2( alumnos_arr3, "Martin", "Aoad", "Pedro", "Lu
 console.log( alumnos_arr4 );
 
 // EJEMPLO en ECMAS6 - FIN
+
+
+
+
+
+
+
+
+
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// Resticciones del Parámetros REST
+// * Sólo puede existir un Parámetro rest en la función
+// * El parámetro rest debe ir siempre como último parámetro
+
+// function juntar_nombres( ...nombres, apellido ){
+//
+//   // cualqueir cosa
+//
+// }
