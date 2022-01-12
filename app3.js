@@ -125,3 +125,28 @@ console.log(sum.apply(null, numbers));
 console.log(sum(...numbers));
 
 // EJEMPLO 2 ECMAS6 - FIN
+
+
+
+
+
+
+
+
+
+
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// Romper la relación de referencia de los objetos utilizando el operador SPREAD
+
+let persona1 = {
+  nombre: "Fabio",
+  edad: 25
+}
+
+let persona2 = { ...persona1 }
+
+persona2.nombre = 'Martin';
+
+console.log( persona1 );
+console.log( persona2 );
