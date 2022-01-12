@@ -201,3 +201,39 @@ etiqueta2`${unidades2} tornillos cuentas ${ unidades2 * consto_unitario2 } pesos
 
 
 console.log("////////////////////////////////////////////");
+
+
+////////////////////////////////////////////
+// Templates crudo (RAW)
+
+// Ejemplo 1
+let mensaje2 = `Hola \nMundo\\`; // aqui hace salto de linea y a la "\\" la toma como "/"
+let mensaje3 = String.raw`Hola \nMundo\\`; //muestra en crudo "Hola \nMundo\\"
+
+console.log( mensaje2 );
+console.log( mensaje3 );
+
+console.log("////////////////////////////////////////////");
+
+// Ejemplo 2: comparo el uso de templates con tag y con raw
+
+function quux (literales, ...values) {
+  console.log(literales);
+  console.log( values );
+  let resultado = false;
+  if(literales[0] === "foo\n" &&
+  literales[1] === "bar" &&
+  literales.raw[0] === "foo\\n" &&
+  literales.raw[1] === "bar" &&
+  values[0] === 42) {
+    resultado = true;
+  }
+
+  return resultado;
+
+}
+
+let mensaje4 = quux`foo\n${ 42 }bar`;
+console.log("Haciendo uso de templates con TAG el resultado es: ", mensaje4);
+
+let mensaje5 = String.raw`foo\n${ 42 }bar` === "foo\\n42bar"
