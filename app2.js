@@ -1,4 +1,4 @@
-//// UNIDAD 3 ///
+//// UNIDAD 4 ///
 console.log("////////////////////////////////////////////");
 ////////////////////////////////////////////
 // Parametros por defecto
@@ -150,3 +150,43 @@ var persona = {
 saludar4( fnTemporal3, persona );
 
 // EJEMPLO 7 - FIN
+
+
+
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// como los valores por defecto afectan al objeto arguments
+
+// EJEMPLO 1 - envio con argumentos - INICIO
+// sumar recibe en arguments: a,b, "Fabio", y objeto {g:1,t:2}
+
+function sumar(a,b){
+
+  console.log( arguments );
+
+}
+
+
+sumar( 1, 2, 5, "Fabio", { g: 1, t: 2 } );
+
+// EJEMPLO 1 - envio con argumentos - FIN
+
+
+// EJEMPLO 2 - envio sin argumentos - INICIO
+//sumar2 no recibe nada y arguments esta vacio
+
+function sumar2( a = 1, b = 2 ){
+
+  console.log( arguments );
+
+}
+
+
+sumar2();
+
+// EJEMPLO 2 - envio sin argumentos - FIN
+
+
+
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
