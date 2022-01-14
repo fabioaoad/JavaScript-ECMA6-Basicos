@@ -270,3 +270,46 @@ var ordenadoECMS6 = arreglo.sort( (a,b) => a-b );
 console.log( ordenadoECMS6 );
 
 // EJEMPLO2 ECMAS6 - FIN
+
+
+
+
+
+
+
+console.log("///////////////////////////////// ///////////");
+////////////////////////////////////////////
+// Identificando funciones de flecha
+
+
+
+var restar = (a,b) => a - b;
+
+console.log( typeof restar ); // me devuelve function es decir, es una funcion
+console.log( restar instanceof Function ); //otra forma es con "instanceof Function" que me dice true ya que es una funcion de flecha
+
+
+//var restar2 = new restar(1,6); // NO se puede hacer porq las funciones flecha no tiene el new
+
+
+// la siguente funcion anonima da error porq arguments no esta definido
+// dentro del objeto global
+
+// ( (a,b) => {
+//   console.log( arguments[3] );
+// })();
+
+
+
+// la siguente funcion da soluncion al problema anterior.
+function ejemplo(x,y){
+
+  ( (a,b) => {
+    console.log( arguments[3] );
+  })();
+
+
+}
+
+
+ejemplo(10,20)
