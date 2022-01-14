@@ -237,4 +237,36 @@ var manejador3 = {
 
 manejador3.init();
 
-// EJEMPLO4 ECMA6 - FIN
+// EJEMPLO3 ECMA6 - FIN
+
+
+
+
+console.log("///////////////////////////////// ///////////");
+////////////////////////////////////////////
+// Funciones de flecha y arreglos
+
+
+
+// ARREGLO A ORDENAR
+var arreglo = [5,10,11,2,4,6,1,66,43,33,17,96];
+
+// EJEMPLO1 ECMAS5 - INICIO
+
+var ordenadoECMS5 = arreglo.sort(function(a,b){
+  return a-b;
+});
+
+console.log( ordenadoECMS5 );
+
+// EJEMPLO1 ECMAS5 - FIN
+
+
+
+// EJEMPLO2 ECMAS6 - INICIO
+
+var ordenadoECMS6 = arreglo.sort( (a,b) => a-b );
+
+console.log( ordenadoECMS6 );
+
+// EJEMPLO2 ECMAS6 - FIN
