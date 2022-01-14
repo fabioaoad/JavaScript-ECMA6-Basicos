@@ -157,3 +157,84 @@ let saludo5 = ( nombre => `Hola ${nombre}` )("Martin");
 console.log( saludo5 );
 
 // EJEMPLO3 ECMAS6 - FIN
+
+
+
+console.log("///////////////////////////////// ///////////");
+////////////////////////////////////////////
+// en ECMAS6 no hay cambios en el objeto this
+
+
+// EJEMPLO1 ECMA5 - se muetra el error al hacer click en documento - INICIO
+
+var manejador = {
+  id: "123",
+
+  init: function(){
+      document.addEventListener("click", function(event){
+        this.clickEnPagina( event.type );
+        console.log(this);
+      }, false );
+  }, // fin del init
+
+  clickEnPagina: function(type){
+    console.log( "Manejando (ejemplo 1) " + type + " para el id: " + this.id  );
+  }
+};
+
+
+
+manejador.init();
+
+// EJEMPLO1 ECMA5 - se muetra el error al hacer click en documento - FIN
+
+
+// EJEMPLO2 ECMA5 - se corrige el error al hacer click en documento - INICIO
+
+var manejador2 = {
+  id: "123",
+
+  init: function(){
+      document.addEventListener("click", (function(event){
+        this.clickEnPagina( event.type );
+        console.log(this);
+      }).bind(this), false );
+  }, // fin del init
+
+  clickEnPagina: function(type){
+    console.log( "Manejando (ejemplo 2) " + type + " para el id: " + this.id  );
+  }
+};
+
+
+
+manejador2.init();
+
+// EJEMPLO2 ECMA5 - se corrige el error al hacer click en documento - FIN
+
+
+
+
+
+
+
+// EJEMPLO3 ECMA6 - INICIO
+
+var manejador3 = {
+  id: "123",
+
+  init: function(){
+      document.addEventListener("click",
+      event => this.clickEnPagina( event.type ));
+  }, // fin del init
+
+  clickEnPagina: function(type){
+    console.log( "Manejando (ejemplo 3) " + type + " para el id: " + this.id  );
+  }
+};
+
+
+
+manejador3.init();
+
+// EJEMPLO4 ECMA6 - FIN
