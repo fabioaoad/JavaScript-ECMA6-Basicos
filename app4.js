@@ -122,3 +122,38 @@ console.log(obtenerLibro1());
 
 console.log("////////////////////////////////////////////");
 ////////////////////////////////////////////
+// Funciones anónimas
+
+
+// EJEMPLO1 ECMAS5 - INICIO
+
+var saludo4 = function(nombre){
+  return "Hola " + nombre;
+}("Fabio");
+
+console.log( saludo4 );
+
+// EJEMPLO1 ECMAS5 - FIN
+
+
+
+
+// EJEMPLO2 ECMAS5 - tambien puede llevar parentesis  pero no se usa - INICIO
+
+var saludo4 = (function(nombre){
+  return "Hola " + nombre;
+})("Aoad");
+
+console.log( saludo4 );
+
+// EJEMPLO2 ECMAS5 - tambien puede llevar parentesis  pero no se usa - FIN
+
+
+
+
+// EJEMPLO3 ECMAS6 - INICIO
+
+let saludo5 = ( nombre => `Hola ${nombre}` )("Martin");
+console.log( saludo5 );
+
+// EJEMPLO3 ECMAS6 - FIN
