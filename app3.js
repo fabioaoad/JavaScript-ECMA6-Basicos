@@ -248,20 +248,30 @@ console.log("////////////////////////////////////////////");
 // new.target es más seguro que el instanceof
 
 
-function Persona(nombre){
-
-  if ( typeof new.target !== "undefined" ) {
-    this.nombre = nombre;
-  } else {
-    throw new Error('Esta función debe de ser utilizada con el new');
-  }
-
-  this.nombre = nombre;
-
-}
-
-var persona     = new Persona("Fabio");
-var noEsPersona =     Persona.call( persona, "Fabio");
+// function Persona(nombre){
+//
+//   if ( typeof new.target !== "undefined" ) {
+//     this.nombre = nombre;
+//   } else {
+//     throw new Error('Esta función debe de ser utilizada con el new');
+//   }
+//
+//   this.nombre = nombre;
+//
+// }
+//
+// var persona     = new Persona("Fabio");
+// var noEsPersona =     Persona.call( persona, "Fabio");
 
 //console.log(persona);
 //console.log(noEsPersona);
+
+
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+
+
+function crear_persona(nombre="Fernando", apellido = "Herrera"){
+console.log(arguments);
+}
+crear_persona();
