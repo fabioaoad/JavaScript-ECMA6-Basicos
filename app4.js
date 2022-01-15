@@ -310,6 +310,3 @@ function ejemplo(x,y){
 
 
 }
-
-
-ejemplo(10,20)
