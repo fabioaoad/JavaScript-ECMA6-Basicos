@@ -172,3 +172,70 @@ console.log( "==========" );
 console.log( 5 == "5" ); //true
 console.log( 5 === "5" ); //false
 console.log( Object.is(5,"5") ); //false
+
+
+
+
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// Nuevo método Objeto.assign()
+
+
+// EJEMPLO1 ECMAS5 - INICIO
+
+function mezclar( objReceptor, objDonador ){
+  Object.keys( objDonador ).forEach( function(key){
+    objReceptor[key] = objDonador[key];
+  });
+  return objReceptor;
+}
+
+var objReceptor = {};
+var objDonador = {
+  nombre: "mi-archivo.js"
+}
+
+console.log( mezclar( objReceptor, objDonador ) );
+
+// EJEMPLO1 ECMAS5 - FIN
+
+console.log("////////////////////////////////////////////");
+
+
+// EJEMPLO2 ECMAS6 - INICIO
+
+function mezclar2( objReceptor, objDonador ){
+  Object.keys( objDonador ).forEach( function(key){
+    objReceptor[key] = objDonador[key];
+  });
+  return objReceptor;
+}
+
+let objReceptor2 = {};
+let objDonador2 = {
+  get nombre(){
+    return "mi-archivo.js"
+  }
+}
+
+console.log( objDonador2.nombre );
+console.log( "Objeto donador original con el get ",objDonador2 );
+console.log( "Objeto receptor mezclado sin el get ",mezclar2( objReceptor2, objDonador2 ) );
+
+// EJEMPLO2 ECMAS6 - FIN
+
+
+console.log("////////////////////////////////////////////");
+
+// EJEMPLO3 ECMAS6 - INICIO
+
+let objReceptor3 = {};
+let objDonador3 = {
+  get nombre(){
+    return "mi-archivo.js"
+  }
+}
+
+console.log( "Objeto receptor mezclado (ECMAS6) sin el get ", Object.assign( objReceptor3, objDonador3 ) );
+
+// EJEMPLO3 ECMAS6 - FIN
