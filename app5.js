@@ -77,3 +77,75 @@ persona2.getNombre();
 
 
 // EJEMPLO2 - ECMAS6 - FIN
+
+
+
+
+
+
+
+
+
+
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// Nombres de propiedades computadas o procesadas
+
+// EJEMPLO1 - ECMAS5 - INICIO
+
+var persona3 = {};
+
+var apellido = "apellido";
+
+persona["primer nombre"] = "Fabio";
+persona[apellido] = "Aoad";
+persona.apellido = "Aoad";
+
+console.log( persona["primer nombre"] );
+console.log( persona[apellido] );
+console.log( persona.apellido );
+
+var persona4 = {
+  "primer nombre": "Fabio"
+}
+
+console.log( persona4["primer nombre"] );
+
+// EJEMPLO1 - ECMAS5 - FIN
+
+
+// EJEMPLO2 - ECMAS6 - INICIO
+
+var apellido = "primer apellido";
+
+var persona5 = {
+
+  "primer nombre": "Fabio",
+  [apellido]: "Aoad"
+
+};
+
+console.log( persona5[ "primer nombre" ] );
+console.log( persona5[ apellido ] );
+
+// EJEMPLO2 - ECMAS6 - FIN
+
+
+// EJEMPLO3 - ECMAS6 - INICIO
+
+var subFijo = " nombre";
+
+var persona6 = {
+  [ "primer" + subFijo ]: "Fabio",
+  [ "segundo" + subFijo ]: "Martin",
+};
+
+console.log( persona6["primer nombre"] );
+console.log( persona6["segundo" + subFijo] );
+
+// EJEMPLO3 - ECMAS6 - FIN
+
+
+
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
