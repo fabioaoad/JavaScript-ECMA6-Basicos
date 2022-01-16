@@ -239,3 +239,43 @@ let objDonador3 = {
 console.log( "Objeto receptor mezclado (ECMAS6) sin el get ", Object.assign( objReceptor3, objDonador3 ) );
 
 // EJEMPLO3 ECMAS6 - FIN
+
+
+
+
+
+
+
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// Orden de enumeración de las propiedades de los objetos
+// *) Todas las llaves van en orden ascendente
+// *) Todas las llaves tipo string van ordenadas en la manera que fueron agregadas al objeto
+// *) Todos los símbolos en el orden que fueron agregados al objeto
+
+
+var objeto = {
+  c: 1,
+  0: 1,
+  x: 1,
+  15: 1,
+  r: 1,
+  3: 1,
+  b: 1
+};
+
+objeto.d = 1;
+objeto["2"] = 1;
+objeto["a"] = 1;
+
+console.log( Object.getOwnPropertyNames( objeto ).join(",") );
+console.log( Object.keys( objeto ) );
+console.log( JSON.stringify( objeto ) );
+
+for (i in Object.keys( objeto ) ) {
+  console.log( Object.keys( objeto )[i] );
+}
+
+
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
