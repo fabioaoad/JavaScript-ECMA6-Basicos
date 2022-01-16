@@ -279,3 +279,18 @@ for (i in Object.keys( objeto ) ) {
 
 console.log("////////////////////////////////////////////");
 ////////////////////////////////////////////
+
+// EJEMPLO DE LA TAREA 6
+
+let persona8 = {
+ [getPropiedad()]:"FMA"
+};
+
+function getPropiedad(){
+ return "nombre";
+}
+console.log( persona8[ getPropiedad() ] );
+console.log(Object.keys(persona8));
+
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
