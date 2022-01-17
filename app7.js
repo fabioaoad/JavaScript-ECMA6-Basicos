@@ -150,6 +150,55 @@ console.log( "Mi simbolo es: " + String(id)  );   // Mi simbolo es: Symbol(id un
 
 
 
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// Recuperando las propiedades de Símbolos
+
+// EJEMPLO1 - INICIO
+
+let otroID = Symbol.for("otroID");
+let activo = Symbol.for("activo");
+
+let miPersona = {
+  [otroID]: "123",
+  [activo]: true,
+  ["codigo"]: "XYZ123",
+  nombre: "Fabio",
+  apellido: "Aoad",
+  edad: 25
+};
+
+// NO muestra los simbolos
+console.log( Object.keys( miPersona ) );
+
+// NO muestra los simbolos
+for( key in miPersona ) {
+  console.log( key, miPersona[key] );
+}
+
+
+// SI muestra los simbolos
+let simbolosMostrados = Object.getOwnPropertySymbols( miPersona );
+console.log( simbolosMostrados );  // Array [ Symbol("otroID"), Symbol("activo") ]
+
+
+// Symbol("otroID")
+// Symbol("activo")
+for( i in simbolosMostrados){
+  console.log( simbolosMostrados[i] );
+}
+
+
+// Symbol("otroID") otroID
+// Symbol("activo") activo
+for( i in simbolosMostrados){
+  console.log( simbolosMostrados[i], Symbol.keyFor( simbolosMostrados[i] ) );
+}
+
+
+// EJEMPLO1 - FIN
+
+
 
 
 
