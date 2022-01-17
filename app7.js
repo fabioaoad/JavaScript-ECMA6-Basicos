@@ -125,6 +125,79 @@ console.log( Symbol.keyFor( id3 ) ); // undefined porq no existe nada asociado e
 
 
 
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// Coerción de los Símbolos
+
+let miID = Symbol.for("miID");
+let numero = 10;
+let texto = "10";
+let bool = true;
+let NotAN = NaN;
+
+console.log( numero + texto );                    // 1010
+console.log( numero + Number(texto) );            // 20
+console.log( numero + NotAN );                    // NaN
+console.log( bool + bool );                       // 2
+console.log( bool + (!bool) );                    // 1
+//console.log( texto + miID );                    // can't convert symbol to string
+console.log( miID );                              // Symbol("miID")
+//console.log( "Mi simbolo es: " + id );          // can't convert symbol to string
+console.log( "Mi simbolo es: " , id );            // Mi simbolo es:  Symbol("id unico")
+console.log( "Mi simbolo es: " + String(id)  );   // Mi simbolo es: Symbol(id unico)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
