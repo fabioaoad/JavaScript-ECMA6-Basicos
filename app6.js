@@ -309,6 +309,81 @@ console.log( nombre5, apellido5 );
 
 
 
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// Destructuración de parámetros con valores por defecto
+
+// EJEMPLO1 - INICIO
+function crearJugador( nickname, opciones ){
+
+  opciones = opciones || {};
+
+  let hp = opciones.hp,
+      sp = opciones. sp,
+      clase = opciones.clase;
+
+      console.log( nickname, hp, sp, clase );
+
+}
+
+
+crearJugador( "FMA-M", {
+  hp: 100,
+  sp: 50,
+  clase: "MAGO"
+});
+
+// EJEMPLO1 - FIN
+
+// EJEMPLO2 - INICIO
+
+function crearJugador2( nickname, { hp, sp, clase } = { hp:80, sp:20, clase: "HUMANO" } ){
+
+      console.log( nickname, hp, sp, clase );
+
+}
+
+//con valores por defecto de los parámetros
+crearJugador2( "FMA-H" );
+
+// envio los parámetros explicitamente
+crearJugador2( "FMA-W", {
+  hp: 800,
+  sp: 350,
+  clase: "WARRIOR"
+});
+
+// EJEMPLO2 - FIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
