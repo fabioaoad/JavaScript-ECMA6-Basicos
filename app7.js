@@ -81,7 +81,7 @@ console.log("////////////////////////////////////////////");
 
 
 
-let userID = Symbol.for("userID");
+let userID = Symbol.for("userID"); // verifico que el simbolo no exista con el for. "userID" es la descripción o alias
 let objeto = {};
 
 objeto[userID] = "12345";
@@ -115,10 +115,8 @@ console.log( Symbol.keyFor( id2 ) );  // id unico
 console.log( id === id2 ); // true
 
 
-let id3 = Symbol("id unico");
+let id3 = Symbol("id unico"); // Creo un nuevo simbolo. NO uso el for
 console.log( Symbol.keyFor( id3 ) ); // undefined porq no existe nada asociado en la pila al id3 porq estoy creando un simbolo
-
-
 
 
 
