@@ -114,12 +114,13 @@ let ajustes = {
   email: "fabioaoad@gmail.com",
   facebook: "fb/fabioaoad",
   google: "fabioaoad",
-  premium: true
+  premium: true,
+  github: "gh/fabioaoad"
 };
 
-let { nombre, facebook, email, google, premium:dePago, twitter, otraCosa = "otro valor" } = ajustes;
+let { nombre, facebook, email, google, premium:dePago, twitter, otraCosa = "otro valor", github:cuentaGH = "miGH/fabio" } = ajustes;
 
-console.log( nombre, email, facebook, google, dePago, twitter, otraCosa );
+console.log( nombre, email, facebook, google, dePago, twitter, otraCosa, cuentaGH );
 
 
 // EJEMPLO1 ECMAS6 - FIN
