@@ -237,6 +237,80 @@ console.log(b);
 
 
 
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// Destructuración de arreglos anidados
+
+// EJEMPLO1 ECMAS6 - INICIO
+
+let colores1 = [ "rojo", ["verde", "amarillo"], "morado", "naranja" ];
+
+let [ color1, [color2] ] = colores1;
+
+console.log(color1);
+console.log(color2);
+
+// EJEMPLO1 ECMAS6 - FIN
+
+
+// EJEMPLO2 ECMAS6 - INICIO
+
+let colores2 = [ "rojo", "verde", "amarillo", "morado", "naranja" ];
+
+// operador rest
+let [ colorPrincipal, colorSecundario, ...demasColores ] = colores2;
+
+console.log( colorPrincipal );
+console.log( colorSecundario );
+console.log( demasColores );
+
+// EJEMPLO2 ECMAS6 - FIN
+
+
+// EJEMPLO3 ECMAS6 - INICIO
+
+let colores3 = [ "violeta", "negro" ];
+
+// operador rest
+let [ colorPrincipal2, colorSecundario2, ...demasColores2 ] = colores3;
+
+console.log( colorPrincipal2 );
+console.log( colorSecundario2 );
+console.log( demasColores2 );
+
+// EJEMPLO3 ECMAS6 - FIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
