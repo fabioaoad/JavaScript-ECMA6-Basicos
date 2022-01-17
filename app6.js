@@ -171,3 +171,79 @@ console.log( otroSuperNodo );
 
 let otroSuperNodo2 = autoGuardado.otroNodo.subNodo.cursor;
 console.log( otroSuperNodo2 );
+
+
+
+
+
+
+
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// Destructuración de arreglos
+
+// EJEMPLO1 ECMAS6 - INICIO
+
+let frutas = ["Mandarina", "Naranja", "Duranzo"];
+
+let [ fruta1, fruta2 ] = frutas;
+
+console.log( fruta1 );
+console.log( fruta2 );
+
+// EJEMPLO1 ECMAS6 - FIN
+
+// EJEMPLO2 ECMAS6 - INICIO
+
+let [,,fruta3] = frutas;
+
+console.log(fruta3);
+
+// EJEMPLO2 ECMAS6 - FIN
+
+
+// EJEMPLO3 ECMAS6 - INICIO
+
+// sobreescribir valores
+
+let otraFruta = "Manzana";
+[ otraFruta ] = frutas;
+console.log( otraFruta );
+
+// EJEMPLO3 ECMAS6 - FIN
+
+
+// EJEMPLO4 ECMAS6 - INICIO
+
+let a = 1;
+let b = 2;
+let temp;
+
+temp = a;
+a = b;
+b = temp;
+
+console.log(a);
+console.log(b);
+
+//Destructuración
+
+[a,b] = [b,a]
+console.log(a);
+console.log(b);
+
+// EJEMPLO4 ECMAS6 - FIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
