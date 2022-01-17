@@ -284,6 +284,26 @@ console.log( demasColores2 );
 
 
 
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// Valores por defeco en la destructuración
+
+let frutas4 = ["naranja", "pera"];
+
+let [ fruta5, fruta6 = "manzana" ] = frutas4;
+
+console.log(fruta5);
+console.log(fruta6);
+
+
+
+let opciones = {
+  nombre5: "Fabio",
+  apellido5: "miOtroApellido"
+};
+
+let { nombre5, apellido5 = "Aoad" } = opciones;
+console.log( nombre5, apellido5 );
 
 
 
