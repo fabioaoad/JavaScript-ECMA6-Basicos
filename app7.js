@@ -74,17 +74,49 @@ console.log( persona[ultimoNombre] ); // ahora si retorna "Aoad"
 
 
 
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// Compartiendo simbolos - Symbol.for() y Symbol.keyFor()
 
 
 
 
+let userID = Symbol.for("userID");
+let objeto = {};
+
+objeto[userID] = "12345";
+
+console.log( objeto[userID] ); // 12345
+console.log( userID );        // Symbol(userID)
 
 
 
+let userID2 = Symbol.for("userID");
+
+console.log( userID == userID2 );           // true
+console.log( userID === userID2 );          // true
+console.log( Object.is(userID, userID2) );  // true
 
 
+console.log( objeto[userID2] ); // 12345
+console.log( userID2 );         // Symbol(userID)
 
 
+//uso de piscina de SIMBOLOS
+
+let id = Symbol.for("id unico");
+console.log( Symbol.keyFor( id ) ); // id unico
+
+
+let id2 = Symbol.for("id unico");
+console.log( Symbol.keyFor( id2 ) );  // id unico
+
+
+console.log( id === id2 ); // true
+
+
+let id3 = Symbol("id unico");
+console.log( Symbol.keyFor( id3 ) ); // undefined porq no existe nada asociado en la pila al id3 porq estoy creando un simbolo
 
 
 
