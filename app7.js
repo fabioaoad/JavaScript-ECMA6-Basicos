@@ -169,7 +169,7 @@ let miPersona = {
 };
 
 // NO muestra los simbolos
-console.log( Object.keys( miPersona ) );
+console.log( Object.keys( miPersona ) ); // Array(4) [ "codigo", "nombre", "apellido", "edad" ]
 
 // NO muestra los simbolos
 for( key in miPersona ) {
@@ -197,63 +197,6 @@ for( i in simbolosMostrados){
 
 
 // EJEMPLO1 - FIN
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
