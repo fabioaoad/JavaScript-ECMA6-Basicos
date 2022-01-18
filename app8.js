@@ -96,6 +96,19 @@ console.log( items3.size );
 
 
 
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// forEach() en set
+
+let personas = new Set(["Fabio", "Martin", "Aoad"]);
+
+personas.forEach( function( valor, llave, setOriginal){
+  console.log( valor, llave, setOriginal );
+  console.log( personas === setOriginal );
+});
+
+
+
 
 
 
