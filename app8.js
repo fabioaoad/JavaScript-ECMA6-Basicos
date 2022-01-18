@@ -55,6 +55,55 @@ console.log( items2.has(9) );   // false
 
 
 
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// Removiendo valores de un set
+
+// EJEMPLO1 - INICIO
+
+let items3 = new Set( [1,2,3,4,5] );
+
+console.log( items3 );
+console.log( items3.size );
+
+
+items3.delete( 3 ); // elimino el 3
+
+
+console.log( items3 );
+console.log( items3.size );
+
+
+// items3.delete( 3 ); // ya estaba eliminado y no pasa nada en consola
+// // Es como si hubiera hecho lo siguiente:
+// if( items3.has(3) ){
+//   items3.delete( 3 );
+// }
+
+
+items3.clear(); // elimino todos los datos del set
+
+console.log( items3 );
+console.log( items3.size );
+
+
+
+
+// EJEMPLO1 - FIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
