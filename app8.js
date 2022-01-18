@@ -100,21 +100,89 @@ console.log("////////////////////////////////////////////");
 ////////////////////////////////////////////
 // forEach() en set
 
+// EJEMPLO1 - INICIO
+
 let personas = new Set(["Fabio", "Martin", "Aoad"]);
 
 personas.forEach( function( valor, llave, setOriginal){
   console.log( valor, llave, setOriginal );
-  console.log( personas === setOriginal );
+  console.log( personas === setOriginal );          // true
+  console.log( personas == setOriginal );           // true
+  console.log( Object.is(personas, setOriginal) );  // true
 });
 
 
+// EJEMPLO1 - FIN
+
+
+
+
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// Convertir un set en array y eliminar duplicados
+
+
+// EJEMPLO1 - INICIO
+
+let numeros = [1,2,3,4,5,6,7];
+
+let setNumeros = new Set( numeros ); // convierto el array a set
+
+console.log( setNumeros ); // Set(7) [ 1, 2, 3, 4, 5, 6, 7 ]
+
+let arrayNumeros = [...setNumeros]; // vuelvo a converti a array
+
+console.log( arrayNumeros ); // Array(7) [ 1, 2, 3, 4, 5, 6, 7 ]
+
+
+// EJEMPLO1 - FIN
+
+console.log("////////////////////////////////////////////");
+
+
+// EJEMPLO2 - INICIO
+
+let numeros2 = [1,2,3,4,5,6,7,7,7,7,6,4,2,2,2,2,1,1,3,3,3,7,6,4,2,7,8];
+
+let arrayNumeros2 = eliminaDuplicados( numeros2 );
+console.log( arrayNumeros2 ); // Array(8) [ 1, 2, 3, 4, 5, 6, 7, 8 ]
+
+function eliminaDuplicados( items ){
+
+  let set = new Set(items);
+  return [...set]
+
+}
+
+
+
+// EJEMPLO2 - FIN
+
+
+
+
+console.log("////////////////////////////////////////////");
 
 
 
 
 
+// EJEMPLO3 - INICIO
 
 
+let numeros3 = [1,2,3,4,5,6,7,7,7,7,6,4,2,2,2,2,1,1,3,3,3,7,6,4,2,7,8];
+
+let arrayNumeros3 = eliminaDuplicados( numeros3 );
+console.log( arrayNumeros3 ); // Array(8) [ 1, 2, 3, 4, 5, 6, 7, 8 ]
+
+function eliminaDuplicados2( items ){
+
+  return [... new Set(items)]
+
+}
+
+
+// EJEMPLO3 - FIN
 
 
 
