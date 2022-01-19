@@ -326,7 +326,7 @@ for (let persona of personas3) {
 
 // EJEMPLO7 - INICIO
 
-console.log("/////////////////FOR-OF - MAP DE OBJETOS///////////////////////");
+console.log("/////////////////FOR-OF - MAP///////////////////////");
 
 let persona4 = new Map( [ ["nombre", "Fabio"], ["apellido", "Aoad"] ] );
 
@@ -336,16 +336,6 @@ for (let persona of persona4) {
 
 
 // EJEMPLO7 - FIN
-
-
-
-
-
-
-
-
-
-
 
 
 
