@@ -188,14 +188,35 @@ function eliminaDuplicados2( items ){
 
 
 
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// Weekset
 
 
 
+let set = new WeakSet();
+
+let per1 = {
+  nombre1: "Fabio"
+};
+
+let per2 = {
+  nombre2: "Martin"
+};
+
+console.log(set);
+
+set.add(per1);
+set.add(per2);
+console.log(set);
+//set.delete(per2);
+
+console.log(set);
 
 
 
-
-
+let personas66 = new Set([["nombre","fernando"],["nombre","maria"]]);
+console.log(personas66);
 
 
 
