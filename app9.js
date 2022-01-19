@@ -153,6 +153,63 @@ console.log( mapa8.get(undefined) );    // undefined
 
 
 
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// foreach de los map
+
+
+let mapa9 = new Map( [ ["nombre", "Martin"], ["edad",24] ] );
+
+
+// EJEMPLO1 - INICIO
+
+mapa9.forEach( function( valor, llave, mapaOrigen){
+  console.log( `llave: ${llave}, valor: ${valor}` );
+  console.log( mapaOrigen );
+});
+
+// EJEMPLO1 - FIN
+
+console.log("////////////////////////////////////////////");
+
+
+// EJEMPLO2 - INICIO
+
+mapa9.forEach(
+  (valor, llave) =>
+      console.log( `llave: ${llave}, valor: ${valor}`)
+);
+
+// EJEMPLO2 - FIN
+
+console.log("////////////////////////////////////////////");
+
+
+// EJEMPLO3 - INICIO
+
+mapa9.forEach(
+  (valor) =>
+      console.log( `valor: ${valor}`)
+);
+
+// EJEMPLO3 - FIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
