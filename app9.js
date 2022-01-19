@@ -196,13 +196,146 @@ mapa9.forEach(
 
 
 
+console.log("////////////////////////////////////////////");
+
+
+
+////////////////////////////////////////////
+// for-of nuevo ciclo en ECMAS6
+
+
+
+let numeros = [100,24,56,34,65,1,6,75,386];
+
+// EJEMPLO1 - INICIO
+
+console.log("/////////////FOR///////////////////////////////");
+
+for (let i = 0; i < numeros.length; i++) {
+  console.log( numeros[i] );
+}
+
+
+// EJEMPLO1 - FIN
+
+
+
+
+// EJEMPLO2 - INICIO
+
+console.log("/////////////////FOR-IN///////////////////////////");
+
+for (let i in numeros) {
+  console.log( numeros[i] );
+}
+
+// EJEMPLO2 - FIN
 
 
 
 
 
+// EJEMPLO3 - INICIO
+
+console.log("/////////////////FOR-OF///////////////////////////");
+
+for (let numero of numeros) {
+  console.log( numero );
+}
+
+// EJEMPLO3 - FIN
 
 
+
+
+// EJEMPLO4 - INICIO
+
+console.log("/////////////////FOR-OF - ARRAY DE OBJETOS///////////////////////");
+
+let personas = [
+  { nombre: "Fabio", edad: 23 },
+  { nombre: "Martin", edad: 24 },
+  { nombre: "Aoad", edad: 22 },
+  { nombre: "María", edad: 23 },
+  { nombre: "Susana", edad: 25 },
+  { nombre: "Florencia", edad: 26 },
+  { nombre: "Luciana", edad: 31 },
+];
+
+
+for (let persona of personas) {
+  console.log( persona.nombre, persona.edad );
+}
+
+// EJEMPLO4 - FIN
+
+
+
+
+
+// EJEMPLO5 - INICIO
+
+console.log("/////////////////FOR-OF - SET DE OBJETOS///////////////////////");
+
+let personas2 = new Set();
+
+personas2.add( { nombre: "Fabio", edad: 23} );
+personas2.add( { nombre: "Martin", edad: 24} );
+personas2.add( { nombre: "Aoad", edad: 22} );
+personas2.add( { nombre: "María", edad: 23} );
+personas2.add( { nombre: "Susana", edad: 25} );
+personas2.add( { nombre: "Florencia", edad: 26} );
+personas2.add( { nombre: "Luciana", edad: 31} );
+
+
+for (let persona of personas2) {
+  console.log( persona.nombre, persona.edad );
+}
+
+
+// EJEMPLO5 - FIN
+
+
+
+
+
+// EJEMPLO6 - INICIO
+
+console.log("/////////////////FOR-OF - SET DE VALORES PLANOS///////////////////////");
+
+let personas3 = new Set();
+
+personas3.add( "Fabio" );
+personas3.add( "Martin" );
+personas3.add( "Aoad" );
+personas3.add( "María" );
+personas3.add( "Susana" );
+personas3.add( "Florencia" );
+personas3.add( "Luciana" );
+
+
+for (let persona of personas3) {
+  console.log( persona );
+}
+
+// EJEMPLO6 - FIN
+
+
+
+
+
+// EJEMPLO7 - INICIO
+
+console.log("/////////////////FOR-OF - MAP DE OBJETOS///////////////////////");
+
+let persona4 = new Map( [ ["nombre", "Fabio"], ["apellido", "Aoad"] ] );
+
+for (let persona of persona4) {
+  console.log( persona );
+}
+
+
+// EJEMPLO7 - FIN
 
 
 
