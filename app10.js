@@ -68,6 +68,7 @@ console.log("////////////////////////////////////////////");
 ////////////////////////////////////////////
 // clases como expresiones
 
+// EJEMPLO1 - INICIO
 
 let miFuncion = function(){
   console.log("Hola Mundo");
@@ -77,11 +78,12 @@ let otraFuncion = miFuncion;
 console.log( typeof otraFuncion );
 otraFuncion();
 
-
+// EJEMPLO1 - FIN
 
 console.log("////////////////////////////////////////////");
 
 
+// EJEMPLO2 - INICIO
 
 let Persona3 = class{
   constructor(){
@@ -99,11 +101,70 @@ let aoad = new Persona3();
 console.log( typeof aoad );             // Object
 console.log( aoad instanceof Persona3); // true
 
+// EJEMPLO2 - FIN
 
 
 
 
 
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// clases como parámetros
+
+
+// EJEMPLO1 - INICIO
+
+function creadorClases( definicionClase ){
+  return new definicionClase();
+}
+
+let objeto = creadorClases( class{
+  constructor() {
+    this.nombre = undefined;
+    this.edad = 24
+  }
+
+  saludar(){
+    console.log("HOLA");
+  }
+});
+
+objeto.saludar();
+
+// EJEMPLO1 - FIN
+
+console.log("////////////////////////////////////////////");
+
+
+// EJEMPLO2 - INICIO
+
+class Cuadrado{
+  constructor(lado){
+    this.lado = lado;
+  }
+
+  getArea(){
+    return this.lado * this.lado;
+  }
+};
+
+
+function imprimirCuadrado( cuadrado ){
+  if( !(cuadrado instanceof Cuadrado) ){
+    console.error("El parámetro enviado no es un cuadrado");
+    return;
+  }
+  console.log( cuadrado.getArea() );
+}
+
+
+let mesa = new Cuadrado(10);
+let mesa2 = "1234";
+
+imprimirCuadrado( mesa ); // 100
+// imprimirCuadrado( mesa2 ); // El parámetro enviado no es un cuadrado
+
+// EJEMPLO2 - FIN
 
 
 
