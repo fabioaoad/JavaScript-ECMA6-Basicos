@@ -60,14 +60,44 @@ console.log( typeof Persona2 ); // function (deberia decir class)
 console.log( typeof Persona2.prototype.decirNombre ); // function
 
 
-// EJEMPLO1 - FIN
+// EJEMPLO2 - FIN
 
 
 
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// clases como expresiones
+
+
+let miFuncion = function(){
+  console.log("Hola Mundo");
+}
+
+let otraFuncion = miFuncion;
+console.log( typeof otraFuncion );
+otraFuncion();
 
 
 
+console.log("////////////////////////////////////////////");
 
+
+
+let Persona3 = class{
+  constructor(){
+    this.nombre = "",
+    this.edad = 24,
+    this.direccion = "Mi calle 1234"
+  }
+
+  decirNombre(){
+    console.log("Hola Mundo");
+  }
+}
+let aoad = new Persona3();
+
+console.log( typeof aoad );             // Object
+console.log( aoad instanceof Persona3); // true
 
 
 
