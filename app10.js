@@ -172,6 +172,4 @@ imprimirCuadrado( mesa ); // 100
 
 
 
-
-
 //
