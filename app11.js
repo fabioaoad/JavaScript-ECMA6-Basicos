@@ -175,7 +175,7 @@ class Cuadrado2 extends Rectangulo2{
   }
 
   getArea(){
-    //return "Cuadrado: " + (this.alto * this.alto); // ejecuta este método
+    //return "Cuadrado: " + (this.alto * this.alto); // ejecuta este método (Cuadrado2)
     return super.getArea(); // ejecuto método del padre (Rectangulo2)
   }
 
