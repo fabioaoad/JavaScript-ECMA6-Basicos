@@ -107,11 +107,83 @@ let cuadrado = new Cuadrado( 3 );
 
 console.log( cuadrado.getArea() );
 
-console.log( cuadrado instanceof Cuadrado);     // true
-console.log( rectangulo instanceof Rectangulo); // true
+console.log( cuadrado instanceof Cuadrado );     // true
+console.log( rectangulo instanceof Rectangulo ); // true
 
 
 // EJEMPLO1 - FIN
+
+
+
+
+
+
+
+console.log("////////////////////////////////////////////");
+////////////////////////////////////////////
+// Sobrescribiendo funciones del padre
+
+
+
+
+// EJEMPLO1 - INICIO
+
+class Rectangulo2{
+
+  constructor(alto, largo){
+    this.alto = alto;
+    this.largo = largo;
+  }
+
+  getArea(){
+    return "Rectangulo: " + (this.alto * this.largo);
+  }
+
+}
+
+let rectangulo2 = new Rectangulo2(3,2);
+
+
+class Cuadrado2 extends Rectangulo2{
+
+  constructor(alto){
+    super(alto, alto);
+  }
+
+  getArea(){
+    //return "Cuadrado: " + (this.alto * this.alto); // ejecuta este método
+    return super.getArea(); // ejecuto método del padre (Rectangulo2)
+  }
+
+}
+
+
+let cuadrado2 = new Cuadrado2( 3 );
+
+
+console.log( cuadrado2.getArea() );
+
+console.log( cuadrado2 instanceof Cuadrado2 );     // true
+console.log( rectangulo2 instanceof Rectangulo2 ); // true
+
+
+// EJEMPLO1 - FIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
