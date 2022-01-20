@@ -70,6 +70,30 @@ console.log( yo2 );
 
 
 console.log("////////////////////////////////////////////");
+
+
+
+
+// EJEMPLO3 - OTRO EJEMPLO DE METODO ESTATICO Y COMPUTADO - INICIO
+
+let metodo = "imprime";
+class Figura{
+  static [metodo](){
+    console.log("==============");
+    console.log("=            =");
+    console.log("= Cuadrado =");
+    console.log("=            =");
+    console.log("==============");
+    }
+}
+Figura.imprime();
+
+// EJEMPLO3 - OTRO EJEMPLO DE METODO ESTATICO Y COMPUTADO - FIN
+
+
+
+
+console.log("////////////////////////////////////////////");
 ////////////////////////////////////////////
 // Herencia de las clases
 
@@ -180,13 +204,22 @@ console.log( rectangulo2 instanceof Rectangulo2 ); // true
 
 
 
+// EJEMPLO DE ERROR EN EL SUPER - INICIO
 
+// Error de sintaxis en super
 
+// class Figura{
+// constructor(lado){
+// this.lado = lado;
+// }
+// obtenerVentana(){
+// return super();
+// }
+// }
+// let figura = new Figura();
+// console.log( figura.obtenerVentana() );
 
-
-
-
-
+// EJEMPLO DE ERROR EN EL SUPER - FIN
 
 
 
